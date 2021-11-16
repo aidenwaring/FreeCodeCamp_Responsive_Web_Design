@@ -573,7 +573,6 @@ Multiple box-shadows can be created by using commas to separate properties of ea
 | `inherit`    | Use the `text-transform` value from the parent element |
 | `none`       | Default: Use the original text                         |
 
-
 ```html
 <style>
   h4 {
@@ -749,7 +748,7 @@ A pseudo-class is a keyword that can be added to selectors, in order to select a
 
 CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items sit within surrounding content (like images or spans). The default layout of elements in this way is called the normal flow of a document, but CSS offers the position property to override it.
 
-When the position of an element is set to `relative`, it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of `left` or `right`, and `top` or `bottom`. These say how many pixels, percentages, or ems to move the item away from where it is normally positioned. 
+When the position of an element is set to `relative`, it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of `left` or `right`, and `top` or `bottom`. These say how many pixels, percentages, or ems to move the item away from where it is normally positioned.
 
 ```html
 <style>
@@ -768,7 +767,7 @@ When the position of an element is set to `relative`, it allows you to specify h
 
 ## Move a Relatively Positioned Element with CSS Offsets
 
-The CSS offsets of `top` or `bottom`, and `left` or `right` tell the browser how far to offset an item relative to where it would sit in the normal flow of the document. 
+The CSS offsets of `top` or `bottom`, and `left` or `right` tell the browser how far to offset an item relative to where it would sit in the normal flow of the document.
 
 ```html
 <head>
@@ -820,7 +819,7 @@ The next option for the CSS `position` property is `absolute`, which locks the e
 
 ## Lock an Element to the Browser Window with Fixed Positioning
 
-The next layout scheme that CSS offers is the `fixed` position, which is a type of absolute positioning that locks an element relative to the browser window. 
+The next layout scheme that CSS offers is the `fixed` position, which is a type of absolute positioning that locks an element relative to the browser window.
 
 One key difference between the `fixed` and `absolute` positions is that an element with a fixed position won't move when the user scrolls.
 
@@ -945,6 +944,7 @@ Another positioning technique is to center a block element horizontally. One way
 </style>
 <div></div>
 ```
+
 [Preview](margin.html)
 
 ## Learn about Complementary Colors
@@ -1004,3 +1004,77 @@ Another positioning technique is to center a block element horizontally. One way
 
 ## Adjust the Color of Various Elements to Complementary Colors
 
+```html
+<style>
+  body {
+    background-color: white;
+  }
+  header {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.25em;
+  }
+  h2 {
+    color: #09A7A1;
+  }
+  button {
+    background-color: #FF790E;
+  }
+  footer {
+    background-color: #09A7A1;
+    color: white;
+    padding: 0.5em;
+  }
+</style>
+<header>
+  <h1>Cooking with FCC!</h1>
+</header>
+<main>
+  <article>
+    <h2>Machine Learning in the Kitchen</h2>
+    <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+    <button>Sign Up</button>
+  </article>
+  <article>
+    <h2>Bisection Vegetable Chopping</h2>
+    <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+    <button>Sign Up</button>
+  </article>
+</main>
+<br>
+<footer>&copy; 2018 FCC Kitchen</footer>
+```
+
+## Adjust the Hue of a Color
+
+Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the `hsl()` (hue, saturation, lightness) property as an alternative way to pick a color by directly stating these characteristics.
+
+```html
+<style>
+  body {
+    background-color: #FFFFFF;
+  }
+
+  .green {
+    background-color: hsl(120, 100%, 50%);
+  }
+
+  .cyan {
+    background-color: hsl(180, 100%, 50%);
+  }
+
+  .blue {
+    background-color: hsl(240, 100%, 50%);
+  }
+
+  div {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<div class="green"></div>
+<div class="cyan"></div>
+<div class="blue"></div>
+```
