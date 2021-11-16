@@ -1078,3 +1078,187 @@ Colors have several characteristics including hue, saturation, and lightness. CS
 <div class="cyan"></div>
 <div class="blue"></div>
 ```
+
+## Adjust the Tone of a Color
+
+```html
+<style>
+  header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+
+  nav {
+    background-color: hsl(180, 80%, 25%)
+  }
+
+  h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
+<header>
+  <h1>Cooking with FCC!</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+```
+
+## Create a Gradual CSS Linear Gradient
+
+```html
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC)
+  }
+
+</style>
+
+<div></div>
+```
+
+## Use a CSS Linear Gradient to Create a Striped Element
+
+The `repeating-linear-gradient()` function is very similar to `linear-gradient()` with the major difference that it repeats the specified gradient pattern.
+
+```html
+<style>
+
+  div{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+</style>
+
+<div></div>
+```
+
+## Create Texture by Adding a Subtle Pattern as a Background Image
+
+```html
+<style>
+  body {
+  background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+}
+</style>
+```
+
+## Use the CSS Transform scale Property to Change the Size of an Element
+
+To change the scale of an element, CSS has the `transform` property, along with its `scale()` function. The following code example doubles the size of all the paragraph elements on the page:
+
+```css
+p {
+  transform: scale(2);
+}
+```
+
+```html
+<style>
+  .ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+  #ball1 {
+    left: 20%;
+  }
+  #ball2 {
+    left: 65%;
+    transform: scale(1.5);
+  }
+
+
+</style>
+
+<div class="ball" id= "ball1"></div>
+<div class="ball" id= "ball2"></div>
+```
+
+## Use the CSS Transform scale Property to Scale an Element on Hover
+
+```html
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+    background: linear-gradient(
+      53deg,
+      #ccfffc,
+      #ffcccf
+    );
+  }
+
+  div:hover {
+    transform: scale(1.1);
+  }
+
+</style>
+
+<div></div>
+```
+
+## Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
+
+```html
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin:  50px auto;
+  }
+  #top {
+    background-color: red;
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg);
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>
+```
